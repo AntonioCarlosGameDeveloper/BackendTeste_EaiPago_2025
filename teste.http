@@ -1,0 +1,14 @@
+### Upload
+POST http://localhost:3000/upload/video
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="video"; filename="test.mp4"
+Content-Type: video/mp4
+
+< ./test.mp4
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+### Streaming
+GET http://localhost:3000/static/video/test.mp4
+Range: bytes=0-100000
